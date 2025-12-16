@@ -48,7 +48,6 @@ export async function POST(req: Request) {
     const result = await generateObject({
         model: isStarMethod ? gateway("openai/gpt-oss-safeguard-20b") : gateway('mistral/ministral-3b'),
         schema: schema,
-        mode: 'json',
         messages: [
             {
                 role: 'system',

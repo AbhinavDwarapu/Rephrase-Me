@@ -19,7 +19,6 @@ export async function POST(req: Request) {
         schema: z.object({
             synonyms: z.array(z.string()).describe('A list of exactly 6 synonyms for the given word.'),
         }),
-        mode: 'json',
         messages: [
             {
                 role: 'system',
