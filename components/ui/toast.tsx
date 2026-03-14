@@ -12,9 +12,13 @@ export function Toast({ message, show }: ToastProps) {
     if (!show) return null;
 
     return (
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-50 animate-fadeIn">
+        <div 
+            className="absolute bottom-6 left-1/2 -translate-x-1/2 z-50 animate-fadeIn"
+            role="status"
+            aria-live="polite"
+        >
             <div className="flex items-center gap-2 bg-text-primary text-bg-container px-4 py-3 rounded-lg border-2 border-text-primary shadow-[4px_4px_0px_0px_rgba(45,45,45,1)]">
-                <Check className="w-4 h-4" />
+                <Check className="w-4 h-4" aria-hidden="true" />
                 <span className="font-semibold text-sm">{message}</span>
             </div>
         </div>

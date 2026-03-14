@@ -120,7 +120,7 @@ Result: ${result || '...'}`;
   return (
     <div className="flex min-h-screen items-center justify-center font-sans bg-bg-base">
       {/* Grid background pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgb(232,221,211)_1px,transparent_1px),linear-gradient(to_bottom,rgb(232,221,211)_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgb(232,221,211)_1px,transparent_1px),linear-gradient(to_bottom,rgb(232,221,211)_1px,transparent_1px)] bg-[size:24px_24px]" aria-hidden="true"></div>
 
       <main className="relative flex min-h-screen w-full max-w-4xl flex-col items-center justify-center py-12 px-4">
         {/* Main container with brutalist border */}

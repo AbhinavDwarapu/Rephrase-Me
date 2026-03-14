@@ -36,6 +36,7 @@ export function SynonymCards({ synonyms, className }: SynonymCardsProps) {
                         <button
                             key={index}
                             onClick={() => handleCopy(synonym, index)}
+                            aria-label={`Copy synonym: ${synonym}`}
                             className={cn(
                                 "relative rounded-lg border-2 border-text-primary",
                                 "bg-bg-container",
@@ -51,7 +52,7 @@ export function SynonymCards({ synonyms, className }: SynonymCardsProps) {
                                     {synonym}
                                 </span>
                                 {copiedIndex === index && (
-                                    <Check className="w-3 h-3 text-accent-brown flex-shrink-0" />
+                                    <Check className="w-3 h-3 text-accent-brown flex-shrink-0" aria-hidden="true" />
                                 )}
                             </div>
                         </button>

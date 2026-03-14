@@ -40,7 +40,7 @@ const DEFAULT_ACTIONS: ActionItem[] = [
         text: "Summary",
         icon: Text,
         colors: {
-            icon: "text-orange-600",
+            icon: "text-orange-800",
             border: "border-orange-500",
             bg: "bg-orange-100",
         },
@@ -49,7 +49,7 @@ const DEFAULT_ACTIONS: ActionItem[] = [
         text: "Fix Spelling and Grammar",
         icon: CheckCheck,
         colors: {
-            icon: "text-emerald-600",
+            icon: "text-emerald-800",
             border: "border-emerald-500",
             bg: "bg-emerald-100",
         },
@@ -58,7 +58,7 @@ const DEFAULT_ACTIONS: ActionItem[] = [
         text: "Make shorter",
         icon: ArrowDownWideNarrow,
         colors: {
-            icon: "text-purple-600",
+            icon: "text-purple-800",
             border: "border-purple-500",
             bg: "bg-purple-100",
         },
@@ -120,6 +120,7 @@ export function AIInputWithSuggestions({
                                     `min-h-[${minHeight}px]`,
                                     disabled && "opacity-50 cursor-not-allowed"
                                 )}
+                                aria-label="Input text to rephrase"
                                 value={inputValue}
                                 onChange={(e) => {
                                     setInputValue(e.target.value);
@@ -141,6 +142,7 @@ export function AIInputWithSuggestions({
                                         type="button"
                                         onClick={handleSubmit}
                                         disabled={disabled}
+                                        aria-label={`Submit rephrase as ${selectedItem}`}
                                         className={cn(
                                             "inline-flex items-center gap-1.5",
                                             "border-2 shadow-sm rounded-md px-2 py-0.5 text-xs font-medium",
@@ -152,6 +154,7 @@ export function AIInputWithSuggestions({
                                     >
                                         <currentItem.icon
                                             className={`w-3.5 h-3.5 ${currentItem.colors.icon}`}
+                                            aria-hidden="true"
                                         />
                                         <span
                                             className={currentItem.colors.icon}
@@ -179,8 +182,9 @@ export function AIInputWithSuggestions({
                                             ? "opacity-30 cursor-not-allowed"
                                             : "opacity-100 hover:scale-105"
                                     )}
+                                    aria-label="Submit rephrase request"
                                 >
-                                    <CornerDownLeft className="w-4 h-4 text-text-primary" />
+                                    <CornerDownLeft className="w-4 h-4 text-text-primary" aria-hidden="true" />
                                 </button>
                             </div>
                         </div>
@@ -193,6 +197,7 @@ export function AIInputWithSuggestions({
                                 ? "opacity-100 scale-100"
                                 : "opacity-30 scale-95"
                         )}
+                        aria-hidden="true"
                     />
                 </div>
             </div>
@@ -211,9 +216,11 @@ export function AIInputWithSuggestions({
                                 disabled && "opacity-50 cursor-not-allowed"
                             )}
                             onClick={() => toggleItem(text)}
+                            aria-pressed={selectedItem === text}
+                            aria-label={`Select ${text} style`}
                         >
                             <div className="flex items-center gap-1.5">
-                                <Icon className={cn("h-4 w-4", colors.icon)} />
+                                <Icon className={cn("h-4 w-4", colors.icon)} aria-hidden="true" />
                                 <span className="text-text-primary whitespace-nowrap">
                                     {text}
                                 </span>

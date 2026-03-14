@@ -29,6 +29,7 @@ export function CardTextResponse({ text, className }: CardTextResponseProps) {
         <>
             <button
                 onClick={handleCopy}
+                aria-label="Copy rephrased result"
                 className={cn(
                     "relative w-full max-w-xl mx-auto mt-6 mb-4",
                     "rounded-lg border-2 border-text-primary",
