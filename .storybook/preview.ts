@@ -14,7 +14,12 @@ const preview: Preview = {
       // 'todo' = show in Storybook UI + Vitest; 'error' = fail Vitest on violations (set in CI)
       test:
         typeof process !== "undefined" && process.env?.CI ? "error" : "todo",
-      options: {},
+      options: {
+        runOnly: {
+          type: "tag",
+          values: ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag21aaa"],
+        },
+      },
     },
   },
 };
