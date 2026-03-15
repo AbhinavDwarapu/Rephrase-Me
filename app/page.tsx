@@ -161,7 +161,7 @@ const CUSTOM_ACTIONS = [
     text: "Fluent",
     icon: Sparkles,
     colors: {
-      icon: "text-blue-600",
+      icon: "text-blue-800",
       border: "border-blue-500",
       bg: "bg-blue-100",
     },
@@ -170,7 +170,7 @@ const CUSTOM_ACTIONS = [
     text: "Professional",
     icon: Briefcase,
     colors: {
-      icon: "text-green-600",
+      icon: "text-green-800",
       border: "border-green-400",
       bg: "bg-green-100",
     },
@@ -179,7 +179,7 @@ const CUSTOM_ACTIONS = [
     text: "Casual",
     icon: MessageCircle,
     colors: {
-      icon: "text-purple-600",
+      icon: "text-purple-800",
       border: "border-purple-500",
       bg: "bg-purple-200",
     },
@@ -188,7 +188,7 @@ const CUSTOM_ACTIONS = [
     text: "STAR Method",
     icon: Star,
     colors: {
-      icon: "text-amber-600",
+      icon: "text-amber-800",
       border: "border-amber-500",
       bg: "bg-amber-100",
     },
@@ -197,7 +197,7 @@ const CUSTOM_ACTIONS = [
     text: "Synonym",
     icon: BookText,
     colors: {
-      icon: "text-rose-600",
+      icon: "text-rose-800",
       border: "border-rose-400",
       bg: "bg-rose-100",
     },
